@@ -1,0 +1,43 @@
+html {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+  }
+
+  .page {
+    background-color: #ffffff;
+    color: #212121;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0.03em;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    outline: 1px solid tomato; 
+
+    
+    @media (min-width:$mobile) {
+      width:$mobile;
+    }
+    @media screen and (min-width:$tablet) {
+      width:$tablet ;
+    }
+
+    @media screen and (min-width:$desktop) {
+      width:$desktop;
+    }
+
+}
+
+ul {
+    list-style: none;
+}

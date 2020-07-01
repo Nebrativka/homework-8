@@ -1,0 +1,100 @@
+.header {
+    position: relative;
+}
+
+.menu-button{
+    display: inline-flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    border: none;
+    background-color:transparent;
+
+    & .icon-cross {
+        display: none;
+    }
+    &.is-open .icon-cross {
+        display: block;
+    }
+
+    &.is-open .icon-menu {
+        display: none;
+    }
+
+    @media screen and (min-width:$tablet) {
+        display: none;
+    }
+}
+
+.nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @media screen and(max-width:$tablet) {
+        justify-content: space-between;
+    }
+}
+
+
+.menu-mobile{
+    // display: none;
+  
+    outline: solid 1px tomato; 
+    &.is-open{
+    display: block;
+    }   
+
+    @media screen and (max-width:$tablet) {
+        
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white; 
+    }
+}
+
+
+.nav-link {
+    // margin-bottom: 40px;
+ 
+
+
+        &:hover  {
+            color:#2196F3
+        }
+        &:focus    {
+            color:#2196F3       
+        }
+        @media screen and (max-width:$tablet) {
+            text-align: center;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            /* identical to box height */
+            letter-spacing: 0.02em;
+        }
+    }
+
+    .nav-link:not(:last-child) {
+        @media screen and (max-width:$tablet)
+        {
+            margin-bottom: 40px;
+        }
+       
+    }
+
+    .nav-contacts {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+
+    letter-spacing: 0.02em;
+    color:#757575;
+    }
